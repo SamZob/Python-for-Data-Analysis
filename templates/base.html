@@ -1,0 +1,67 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+  Page Block Classification flask
+{% endblock %}
+
+{% block content %}
+
+ <br>
+ 
+ <h1>Page Block Classification</h1>
+
+ <p>The problem consists in classifying all the blocks of the page layout of a document that has been detected by a segmentation process. </p>
+ <p>This is an essential step in document analysis in order to separate text from graphic areas. There are five classes of page blocks:</p>
+ <p>&nbsp; - Text (1)</p>    
+ <p>&nbsp; - Horizontal line (2)</p>
+ <p>&nbsp; - Graphic (3)</p>
+ <p>&nbsp; - Vertical line (4)</p>
+ <p>&nbsp; - Picture (5).</p>
+
+ <br>
+ {% block summary %}
+
+ <!-- <p>summary page</p> -->
+
+ {% endblock %}
+ <br>
+
+ <p>Click on the "Description" button to see a quick description of the dataset</p>
+
+ <br>
+ 
+ {% block change_page_description %}
+     <a href= "description">
+         <button>Description</button>
+     </a>
+ {% endblock %}
+
+ <br>
+
+ {% block page_content %}
+
+       <!-- <p>predict page</p> -->
+
+ {% endblock %}
+
+ <br>
+ 
+ <p>Click on the "Submit Parameters" button to enter the parameters and get the prediction</p>
+
+ <br>
+
+ {% block change_page_prediction %}
+     <a href= "predict">
+         <button>Submit parameters</button>
+     </a>
+ {% endblock %}
+
+ <br>
+ 
+ {% block results %}
+
+     <!-- <p>result page</p> -->
+ {% endblock %}
+
+{% endblock %}
+

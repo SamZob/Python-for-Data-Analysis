@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+
+    {{wtf.quick_form(form)}}
+
+    <br>
+
+    <h3>To see the results click on the button below</h3>
+
+    <br>
+
+    {% block change_page_result %}
+     <a href= "results">
+         <button>Get your result !</button>
+     </a>
+   {% endblock %}
+
+    <br>
+
+
+{% endblock %}
+
+
+

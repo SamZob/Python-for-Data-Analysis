@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block summary %}
+ <h3>Parameters Description</h3>
+
+ <br>
+
+ <p>&nbsp;height:   integer. | Height of the block.</p>
+ <p>&nbsp;area:     integer. | Area of the block (height * lenght).</p>
+ <p>&nbsp;eccen:    continuous.  | Eccentricity of the block (lenght / height).</p>
+ <p>&nbsp;p_black:  continuous.  | Percentage of black pixels within the block (blackpix / area).</p>
+ <p>&nbsp;p_and:    continuous.  | Percentage of black pixels after the application of the Run Length Smoothing Algorithm (RLSA) (blackand / area).</p>
+ <p>&nbsp;blackpix: integer.  | Total number of black pixels in the original bitmap of the block.</p>
+ <p>&nbsp;blackand: integer.  | Total number of black pixels in the bitmap of the block after the RLSA.</p>
+
+ <br>
+
+ <p>All parameters are numeric and there is no missing values.</p>
+
+ <br>
+
+ <h3>Dependent parameters relations and and the target </h3>
+
+ <br>
+
+ <p>You can see in the figure below the dependent features and the value of the target </p>
+  <img src="image/pairplot.png">
+
+ <br>
+
+ <p>You can see in the figure below the correlation matrix for the features and the target </p>
+ <img src="image/corrmat.png">
+
+ <br>
+{% endblock %}
